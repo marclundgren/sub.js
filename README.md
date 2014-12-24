@@ -5,7 +5,7 @@ A substitute Functor in JavaScript
 
 ## Use
 
-```
+```javascript
 var sub = require("sub")
 
 var template = "My favourite month is {month}"
