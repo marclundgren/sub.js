@@ -1,15 +1,18 @@
 // Sub utility
 
 /* jshint strict:false */
-var sub = function(str, obj) {
-  var keys = Object.keys(obj);
+var sub = function(str) {
 
-  keys.map(function(key) {
-    var re = new RegExp('{' + key + '}', 'gm');
-    str = str.replace(re, obj[key]);
-  });
+  return function(obj) {
+    var keys = Object.keys(obj);
 
-  return str;
+    keys.map(function(key) {
+      var re = new RegExp('{' + key + '}', 'gm');
+      str = str.replace(re, obj[key]);
+    });
+
+    return str;
+  };
 };
 
 module.exports = sub;
