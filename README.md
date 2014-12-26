@@ -8,19 +8,6 @@ A substitute Functor in JavaScript
 ```javascript
 var sub = require("sub")
 
-var template = "My favourite month is {month}"
-
-var message = sub(template, {
-  month: "December"
-})
-
-console.log(message)
-// My favourite month is December
-```
-
-```javascript
-var sub = require("sub")
-
 var template = sub("{exclamation}! he said {adverb} as he jumped into his convertible {noun} and drove off with his {adjective} wife.")
 
 var madlib = template({
